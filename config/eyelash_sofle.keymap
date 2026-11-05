@@ -230,6 +230,14 @@
     combos {
         compatible = "zmk,combos";
 
+        // MISC + the two outermost top-row keys clears all Bluetooth profiles.
+        combo_clear_pairings {
+            timeout-ms = <75>;
+            key-positions = <0 12>;
+            layers = <5>;
+            bindings = <&bt BT_CLR_ALL>;
+        };
+
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
@@ -253,10 +261,10 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "EDIT";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LS(TAB)  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mmv MOVE_DOWN  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
+&kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mmv MOVE_DOWN  &kp LC(A)  &kp LC(LEFT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LC(RIGHT)  &kp BSPC
 &trans  &trans  &DesktopLeft  &trans  &DesktopRIght  &trans  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &kp END  &kp PG_DN
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp INS  &kp DEL  &trans  &trans  &trans
@@ -271,7 +279,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &mmv MOVE_DOWN  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &bt BT_CLR_ALL  &bt BT_CLR  &mkp MB5  &mmv MOVE_RIGHT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+&trans  &trans  &trans  &trans  &trans  &mkp MB5  &mmv MOVE_RIGHT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -281,9 +289,9 @@
         func_layer {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&studio_unlock  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_DOWN  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &bootloader  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mmv MOVE_UP  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&studio_unlock  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &bootloader  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &trans
 &trans  &sys_reset  &trans  &bootloader  &trans  &mkp MB5  &mmv MOVE_RIGHT  &trans  &trans  &bootloader  &sys_reset  &kp SCROLLLOCK  &kp PAUSE_BREAK
 &kp C_MUTE  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
@@ -308,9 +316,9 @@
             display-name = "MISC";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mmv MOVE_DOWN  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
+&kp ESCAPE  &kp N1  &out OUT_USB  &out OUT_BLE  &kp N4  &kp N5  &mmv MOVE_DOWN  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
 &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans  &trans  &rgb_ug RGB_EFF  &mmv MOVE_RIGHT  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END  &kp PG_DN
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans  &bt BT_CLR  &rgb_ug RGB_EFF  &mmv MOVE_RIGHT  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END  &kp PG_DN
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp INS  &kp DEL  &trans  &trans  &trans
             >;
 
