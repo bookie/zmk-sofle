@@ -298,8 +298,8 @@ rect.held, rect.combo.held {
   visibility: hidden;
 }
 </style>
-<g transform="translate(40, 0)" class="layer-QWERTY">
-<text x="0" y="28" class="label" id="QWERTY">QWERTY:</text>
+<g transform="translate(40, 0)" class="layer-Typing">
+<text x="0" y="28" class="label" id="Typing">Typing:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -600,15 +600,17 @@ rect.held, rect.combo.held {
 <g transform="translate(314, 283) rotate(30.0)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#EDIT">
-<text x="0" y="-4" class="key tap layer-activator">EDIT</text>
+<a href="#Edit--Scroll">
+<text x="0" y="-4" class="key tap layer-activator">
+<tspan x="0" dy="-1.2em">Edit</tspan><tspan x="0" dy="1.2em">&amp;</tspan><tspan x="0" dy="1.2em">Scroll</tspan>
+</text>
 </a></g>
 <g transform="translate(389, 294) rotate(30.0)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-space"/>
-<a href="#NAVI">
-<text x="0" y="24" class="key hold layer-activator">NAVI</text>
+<a href="#Navigation--Numpad">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 60%">Navigatio…</tspan></text>
 </a></g>
 <g transform="translate(462, 91)" class="key enter keypos-58">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key enter side"/>
@@ -619,14 +621,16 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-return"/>
-<a href="#Fn">
-<text x="0" y="24" class="key hold layer-activator">Fn</text>
+<a href="#Function--System">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 60%">Function …</tspan></text>
 </a></g>
 <g transform="translate(610, 283) rotate(-30.0)" class="key keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#SYMBOL">
-<text x="0" y="-4" class="key tap layer-activator">SYMBOL</text>
+<a href="#Symbols--Mouse">
+<text x="0" y="-4" class="key tap layer-activator">
+<tspan x="0" dy="-1.2em" style="font-size: 86%">Symbols</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">&amp;</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">Mouse</tspan>
+</text>
 </a></g>
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -634,8 +638,8 @@ rect.held, rect.combo.held {
 <text x="0" y="-4" class="key tap">
 <tspan x="0" dy="-0.9em">RIGHT</tspan><tspan x="0" dy="1.2em">GUI</tspan>
 </text>
-<a href="#MISC">
-<text x="0" y="24" class="key hold layer-activator">MISC</text>
+<a href="#Bluetooth--Lighting">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 60%">Bluetooth…</tspan></text>
 </a></g>
 <g transform="translate(728, 252)" class="key keypos-62">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -654,8 +658,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 388)" class="layer-EDIT">
-<text x="0" y="28" class="label" id="EDIT">EDIT:</text>
+<g transform="translate(40, 388)" class="layer-Edit &amp; Scroll">
+<text x="0" y="28" class="label" id="Edit--Scroll">Edit &amp; Scroll:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -991,8 +995,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 776)" class="layer-SYMBOL">
-<text x="0" y="28" class="label" id="SYMBOL">SYMBOL:</text>
+<g transform="translate(40, 776)" class="layer-Symbols &amp; Mouse">
+<text x="0" y="28" class="label" id="Symbols--Mouse">Symbols &amp; Mouse:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -1334,8 +1338,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1165)" class="layer-Fn">
-<text x="0" y="28" class="label" id="Fn">Fn:</text>
+<g transform="translate(40, 1165)" class="layer-Function &amp; System">
+<text x="0" y="28" class="label" id="Function--System">Function &amp; System:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1673,8 +1677,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1553)" class="layer-NAVI">
-<text x="0" y="28" class="label" id="NAVI">NAVI:</text>
+<g transform="translate(40, 1553)" class="layer-Navigation &amp; Numpad">
+<text x="0" y="28" class="label" id="Navigation--Numpad">Navigation &amp; Numpad:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2040,8 +2044,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1941)" class="layer-MISC">
-<text x="0" y="28" class="label" id="MISC">MISC:</text>
+<g transform="translate(40, 1941)" class="layer-Bluetooth &amp; Lighting">
+<text x="0" y="28" class="label" id="Bluetooth--Lighting">Bluetooth &amp; Lighting:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
