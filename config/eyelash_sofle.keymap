@@ -1,5 +1,5 @@
 // Adapted from bookie/eyelash-corne (keymap blob 0a8e407aa51123345cd75b72d7b82302b395d314).
-// Corne typing rows retain their relative positions; hold left Space for NAVI, adjacent thumb for EDIT.
+// Corne typing rows retain their relative positions; hold left Space for Navigation & Numpad, adjacent thumb for Edit & Scroll.
 // Sofle extras: number row, outer Ctrl/GUI thumbs, right Shift/Delete thumbs.
 // Left knob: scroll on most layers, volume on Fn; knob press: Space (Fn: mute).
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
@@ -203,7 +203,7 @@
     combos {
         compatible = "zmk,combos";
 
-        // MISC + the two outermost top-row keys clears all Bluetooth profiles.
+        // Bluetooth & Lighting + the two outermost top-row keys clears all Bluetooth profiles.
         combo_clear_pairings {
             timeout-ms = <75>;
             key-positions = <0 12>;
@@ -221,7 +221,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "Typing";
             bindings = <
 &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp UP  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp DOWN  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC
@@ -234,7 +234,7 @@
         };
 
         lower_layer {
-            display-name = "EDIT";
+            display-name = "Edit & Scroll";
             bindings = <
 &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mmv MOVE_DOWN  &kp LC(A)  &kp LC(LEFT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LC(RIGHT)  &kp BSPC
@@ -247,7 +247,7 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "Symbols & Mouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &mmv MOVE_DOWN  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
@@ -260,7 +260,7 @@
         };
 
         func_layer {
-            display-name = "Fn";
+            display-name = "Function & System";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mmv MOVE_UP  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &studio_unlock  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans
@@ -273,7 +273,7 @@
         };
 
         navi_layer {
-            display-name = "NAVI";
+            display-name = "Navigation & Numpad";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESCAPE  &kp F1  &kp HOME  &kp UP_ARROW  &kp END  &kp PAGE_UP  &mmv MOVE_DOWN  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_ASTERISK  &trans
@@ -286,7 +286,7 @@
         };
 
         MISC_LAYER {
-            display-name = "MISC";
+            display-name = "Bluetooth & Lighting";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESCAPE  &kp N1  &out OUT_USB  &out OUT_BLE  &kp N4  &kp N5  &mmv MOVE_DOWN  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
