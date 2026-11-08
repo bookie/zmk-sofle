@@ -34,7 +34,7 @@
 
 / {
     // Held layer colors: edit blue, symbols purple, function cyan, navigation orange, settings red.
-    // Release returns to dim green; RGB is enabled and solid mode selected on activation.
+    // Release switches RGB off; RGB is enabled and solid mode selected only on activation.
     // These fixed-color macros indicate one held layer at a time (not a nested layer stack).
     macros {
         mo_rgb1: mo_rgb1 {
@@ -48,7 +48,7 @@
                        <&rgb_ug RGB_ON>,
                        <&macro_pause_for_release>,
                        <&macro_release &mo 1>,
-                       <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,5)>;
+                       <&macro_tap &rgb_ug RGB_OFF>;
         };
 
         mo_rgb2: mo_rgb2 {
@@ -62,7 +62,7 @@
                        <&rgb_ug RGB_ON>,
                        <&macro_pause_for_release>,
                        <&macro_release &mo 2>,
-                       <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,5)>;
+                       <&macro_tap &rgb_ug RGB_OFF>;
         };
 
         mo_rgb3: mo_rgb3 {
@@ -76,7 +76,7 @@
                        <&rgb_ug RGB_ON>,
                        <&macro_pause_for_release>,
                        <&macro_release &mo 3>,
-                       <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,5)>;
+                       <&macro_tap &rgb_ug RGB_OFF>;
         };
 
         mo_rgb4: mo_rgb4 {
@@ -90,7 +90,7 @@
                        <&rgb_ug RGB_ON>,
                        <&macro_pause_for_release>,
                        <&macro_release &mo 4>,
-                       <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,5)>;
+                       <&macro_tap &rgb_ug RGB_OFF>;
         };
 
         mo_rgb5: mo_rgb5 {
@@ -104,7 +104,7 @@
                        <&rgb_ug RGB_ON>,
                        <&macro_pause_for_release>,
                        <&macro_release &mo 5>,
-                       <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,5)>;
+                       <&macro_tap &rgb_ug RGB_OFF>;
         };
 
         DesktopRIght: DesktopRIght {
