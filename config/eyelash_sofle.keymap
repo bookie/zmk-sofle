@@ -1,5 +1,5 @@
 // Adapted from bookie/eyelash-corne (keymap blob 0a8e407aa51123345cd75b72d7b82302b395d314).
-// Corne typing rows retain their relative positions; hold the left Space thumb for EDIT.
+// Corne typing rows retain their relative positions; hold left Space for NAVI, adjacent thumb for EDIT.
 // Sofle extras: number row, outer Ctrl/GUI thumbs, right Shift/Delete thumbs.
 // Left knob: scroll on most layers, volume on Fn; knob press: Space (Fn: mute).
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
@@ -227,7 +227,7 @@
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp DOWN  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC
 &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LEFT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp RIGHT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESCAPE
-&kp SPACE  &kp LCTRL  &kp LEFT_GUI  &mt LEFT_ALT ENTER  &mo 4  &lt 1 SPACE  &kp ENTER  &lt 3 ENTER  &mo 2  &lt 5 RIGHT_GUI  &kp RIGHT_SHIFT  &kp DELETE
+&kp SPACE  &kp LCTRL  &kp LEFT_GUI  &mt LEFT_ALT ENTER  &mo 1  &lt 4 SPACE  &kp ENTER  &lt 3 ENTER  &mo 2  &lt 5 RIGHT_GUI  &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             sensor-bindings = <&scroll_encoder>;
