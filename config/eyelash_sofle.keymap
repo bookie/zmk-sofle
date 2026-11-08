@@ -238,8 +238,8 @@
             bindings = <
 &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mmv MOVE_DOWN  &kp LC(A)  &kp LC(LEFT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LC(RIGHT)  &kp BSPC
-&trans  &kp LC(A)  &DesktopLeft  &trans  &DesktopRIght  &trans  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&trans  &msc SCRL_UP  &msc SCRL_DOWN  &kp LC(C)  &kp LC(V)  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &kp END  &kp PG_DN
+&trans  &kp LC(A)  &DesktopLeft  &trans  &DesktopRIght  &kp LC(S)  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
+&trans  &msc SCRL_UP  &msc SCRL_DOWN  &kp LC(C)  &kp LC(V)  &kp LC(BSPC)  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &kp END  &kp PG_DN
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp INS  &kp DEL  &trans  &trans  &trans
             >;
 
