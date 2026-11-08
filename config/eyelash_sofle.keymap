@@ -1,5 +1,5 @@
 // Adapted from bookie/eyelash-corne (keymap blob 0a8e407aa51123345cd75b72d7b82302b395d314).
-// Corne typing rows retain their relative positions; the left Space thumb is a plain Space key.
+// Corne typing rows retain their relative positions; hold the left Space thumb for EDIT.
 // Sofle extras: number row, outer Ctrl/GUI thumbs, right Shift/Delete thumbs.
 // Left knob: scroll on most layers, volume on Fn; knob press: Space (Fn: mute).
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
@@ -41,12 +41,12 @@
             tap-ms = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1>,
+                <&mo 2>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(300,100,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 1>,
+                <&mo 2>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(128,100,1)>;
         };
@@ -58,12 +58,12 @@
             tap-ms = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 2>,
+                <&mo 3>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(180,100,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 2>,
+                <&mo 3>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(128,100,1)>;
         };
@@ -75,12 +75,12 @@
             tap-ms = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(30,100,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(128,100,1)>;
         };
@@ -207,7 +207,7 @@
         combo_clear_pairings {
             timeout-ms = <75>;
             key-positions = <0 12>;
-            layers = <4>;
+            layers = <5>;
             bindings = <&bt BT_CLR_ALL>;
         };
 
@@ -227,7 +227,20 @@
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp DOWN  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC
 &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LEFT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp RIGHT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESCAPE
-&kp SPACE  &kp LCTRL  &kp LEFT_GUI  &mt LEFT_ALT ENTER  &mo 3  &kp SPACE  &kp ENTER  &lt 2 ENTER  &mo 1  &lt 4 RIGHT_GUI  &kp RIGHT_SHIFT  &kp DELETE
+&kp SPACE  &kp LCTRL  &kp LEFT_GUI  &mt LEFT_ALT ENTER  &mo 4  &lt 1 SPACE  &kp ENTER  &lt 3 ENTER  &mo 2  &lt 5 RIGHT_GUI  &kp RIGHT_SHIFT  &kp DELETE
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        lower_layer {
+            display-name = "EDIT";
+            bindings = <
+&trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mmv MOVE_DOWN  &kp LC(A)  &kp LC(LEFT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LC(RIGHT)  &kp BSPC
+&trans  &kp LC(A)  &DesktopLeft  &trans  &DesktopRIght  &trans  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
+&trans  &msc SCRL_UP  &msc SCRL_DOWN  &kp LC(C)  &kp LC(V)  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &kp END  &kp PG_DN
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &kp INS  &kp DEL  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
