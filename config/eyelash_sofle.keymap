@@ -249,7 +249,7 @@
         raise_layer {
             display-name = "Symbols & Mouse";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_UP  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &mmv MOVE_DOWN  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
 &trans  &trans  &trans  &trans  &trans  &mkp MB5  &mmv MOVE_RIGHT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
@@ -264,9 +264,9 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mmv MOVE_UP  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &studio_unlock  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &bootloader  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &trans
-&trans  &sys_reset  &trans  &bootloader  &trans  &mkp MB5  &mmv MOVE_RIGHT  &trans  &trans  &bootloader  &sys_reset  &kp SCROLLLOCK  &kp PAUSE_BREAK
-&kp C_MUTE  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &trans
+&trans  &trans  &trans  &trans  &trans  &mkp MB5  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &kp SCROLLLOCK  &kp PAUSE_BREAK
+&kp C_MUTE  &sys_reset  &bootloader  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &bootloader  &sys_reset
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
