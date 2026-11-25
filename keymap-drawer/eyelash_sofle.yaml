@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - $$mdi:keyboard-space$$
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$'}
   - Edit & Scroll
